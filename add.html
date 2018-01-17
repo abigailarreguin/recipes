@@ -1,0 +1,89 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+        <!-- The following is for the header bar at the top of the screen. -->
+    <div>
+        <div>
+            <nav class="navbar navbar-inverse bg-inverse" role="navigation" style="padding-left:130px;">
+                    <a class="navbar-brand" href="#">Netty's Kitchen</a>
+                <ul class="nav navbar-nav">
+                    <li><a href="/">Home</a></li>
+                    <!-- <li><a href="/about">About Us</a></li> -->
+                    <li class="active"><a href="/add">Add Recipe<span class="sr-only">(current)</span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <br />
+
+     <!-- Words on the page -->
+    <h1><center>Add a Recipe</center></h1>
+    <p><center>To add a recipe, simply type the name, entree type and the recipe and click submit. Your recipe will be displayed under your homepage.</center></p>
+    <br />
+    <br />
+    <!-- The following forms are for inputting information into the recipe database -->
+        <form role="form" action="/add" method="POST" id="testForm">
+            <div class="form-group">
+                <label for="recipename">Recipe Name</label>
+                <input type="text" class="form-control" name="recipename" id="recipename" placeholder="Type here...">
+            </div>
+            <br />
+              <label for="mealtype">Recipe Type</label>
+            <select name="mealtype" id="mealtype">
+                <option value="Entree">Entree</option>
+                <option value="Side">Side</option>
+                <option value="Snack">Snack</option>
+                <option value="Dessert">Dessert</option>
+            </select>
+            <br />
+            <br />
+            <div class="form-group">
+                <label for="recipe">Recipe</label>
+                <input type="text" class="form-control" name="recipe"  id="recipe" placeholder="Type here...">
+            </div>
+            <button type="submit" value="submitted" id="submitButton"  name="recipeSubmit" type="button">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
+
+
+
+<style>
+form{
+        margin-left: 5cm;
+        margin-right: 5cm;
+    }
+
+.navbar-inverse {
+    font-family: "Helvetica";
+    font-size: 18px;
+    }
+
+body {
+    background-color: #DCDCDC;
+    font-size: 20px;
+    font-family: "Helvetica";
+    }
+
+select {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.16, rgb(207, 207, 207)), color-stop(0.79, rgb(252, 252, 252)));
+  background-image: -moz-linear-gradient(center bottom, rgb(207, 207, 207) 16%, rgb(252, 252, 252) 79%);
+  background-image: linear-gradient(to top, rgb(207, 207, 207) 16%, rgb(252, 252, 252) 79%); 
+  padding: 3px;
+  /* border: 1px solid #000; */
+  color: black;
+  text-decoration: none;
+}
+</style>
+  
